@@ -33,9 +33,12 @@ $('#aggiungi').keydown(function(e) {
       template.prepend(testo);
 
       $('.todo-list').append(template);
+      $(this).val("");
     }
   }
 
+});
 
-
+$('.todo-list').on('click','.item-delete', function() {
+    $(this).parent().remove();
 });

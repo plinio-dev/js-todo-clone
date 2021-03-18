@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+button:focus {
+
+}
+.wrapper {
+  padding-top: 30px;
+  margin: auto;
+  width: 40%;
+}
+
+.titolo {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  background-color: #d03434;
+}
+.titolo h2 {
+  font-weight: 500;
+  color: #ffff;
+  padding: 20px;
+}
+.box-spesa {
+  border: 2px solid #d03434;
+  padding: 15px;
+}
+
+.list-style {
+  list-style: none;
+}
+/* lista */
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: gray;
+}
+/* lista */
+
+#aggiungi {
+  display: none;
+}
+button {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+input {
+  padding: 10px;
+}
+.fa-plus-circle {
+  font-size: 20px;
+  color: gray;
+}
+.fa-minus-circle{
+  padding-left: 20px;
+  font-size: 15px;
+}
+.template {
+  display: none;
+}

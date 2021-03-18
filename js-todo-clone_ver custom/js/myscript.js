@@ -1,10 +1,17 @@
 
 var listaSpesa = [
-  'Acqua',
-  'Biscotti',
-  'Latte',
-  'Mele',
+  'acqua',
+  'biscotti',
+  'latte',
+  'mele',
 ];
+
+
+// all'evento click appare il campo input
+$('#add').click(function(){
+  $("#aggiungi").show('slow', function(){
+  });
+});
 
 
 // ciclo per creare nuovo elementi
@@ -26,6 +33,10 @@ $('.item-delete').click(function() {
 // 5 aggiungere un elemento alla listaSpesa
 $('#aggiungi').keydown(function(e) {
   if (e.which == 13) {
+    // all'evento tasto invio nascondere il campo input
+    $("#aggiungi").hide('slow', function(){
+    });
+
     var testo = $(this).val();
 
     if (testo != "") {

@@ -13,4 +13,29 @@ for (var i = 0; i < listaSpesa.length; i++) {
   template.prepend(listaSpesa[i]);
   // 3 aggiungo il template alla lista
   $('.todo-list').append(template);
-}
+};
+
+// 4 cancello gli elementi della lista
+$('.item-delete').click(function() {
+  $(this).parent().remove();
+});
+
+
+// 5 aggiungere un elemento alla listaSpesa
+$('#aggiungi').keydown(function(e) {
+  if (e.which == 13) {
+    var testo = $(this).val();
+
+    if (testo != "") {
+      // clono il template
+      var template = $('.template li').clone();
+
+      template.prepend(testo);
+
+      $('.todo-list').append(template);
+    }
+  }
+
+
+
+});
